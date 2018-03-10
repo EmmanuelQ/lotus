@@ -1,0 +1,27 @@
+#lotus-toolbar {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  height: 70px;
+  width: 100%;
+  background-color: #039be5;
+}
+.lotus-options {
+  position: relative;
+  display: flex;
+  top: 15px;
+  left: 30%;
+}
+.lotus-app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.lotus-container {
+  position: relative;
+  display: flex;
+  top: 70px;
+  height: calc(100% - 70px);
+  width: 100%;
+  z-index: -1;
+}

@@ -1,0 +1,65 @@
+#lotus-options {
+  position: relative;
+  top: 24px;
+  left: 20px;
+  height: 30px;
+  width: 90px;
+  line-height: 17px;
+  color: white;
+  cursor: pointer;
+}
+
+.options-title {
+  font-size: 19px;
+  transition: margin-top 0.2s ease-out, font-size 0.2s ease-out;
+}
+
+.options-title.open {
+  font-size: 12px;
+  margin-left: 0px; 
+  margin-top: -15px;
+}
+
+.options-subtitle {
+  font-size: 12px;
+  transition: margin-top 0.2s ease-out, font-size 0.2s ease-out; 
+}
+
+.options-subtitle.open {
+  font-size: 19px;
+}
+
+.options-chevron {
+  height: 10px;
+  width: auto;
+  margin-left: 8px;
+  transform: translateY(4px);
+  transition: transform 0.2s ease-out;
+}
+.options-chevron.open {
+  transform: rotate(180deg);
+
+}
+
+.lotus-menu.open {
+  position: absolute;
+  display: flex;
+  height: 200px;
+  width: 120px;
+  margin-top: 20px;
+  background-color: #f8f7f7;
+  border-radius: 2px;
+  box-shadow: 1px 2px 8px 0px #adadad;
+  z-index: 200;
+  
+  .menu-arrow-up {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f8f7f7;
+    border-radius: 2px;
+    // border: 1px solid #f1eeee; 
+  }
+}

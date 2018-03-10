@@ -1,0 +1,15 @@
+@import "../Toolbar/Toolbar.less";
+
+.lotus-app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.lotus-container {
+  position: relative;
+  display: flex;
+  top: @toolbar-height;
+  height: calc(~"100% - @{toolbar-height}");
+  width: 100%;
+  z-index: -1;
+}

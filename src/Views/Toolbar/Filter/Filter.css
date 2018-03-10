@@ -1,0 +1,18 @@
+.lotus-filter {
+  position: relative;
+  margin-left: 40px;
+  width: 60px;
+  cursor: pointer;
+}
+.filter-img {
+  height: 30px;
+  width: auto;
+  left: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.filter-subtitle {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
