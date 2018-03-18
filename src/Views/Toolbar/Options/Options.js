@@ -1,28 +1,17 @@
 import React, { Component } from "react"
 import './Options.css'
-
+import Menu from '../Menu/Menu'
 import chevron from './assets/chevron-arrow-down.svg'
-
-class Menu extends Component {
-  render () {
-    return (
-      <div className={"lotus-menu " + this.props.open}>
-        <span className="menu-arrow-up"></span>
-        {/* <ul>
-          <li>Events</li>
-        </ul> */}
-      </div>
-    )
-  }
-}
 
 class Options extends Component {
   constructor() {
     super()
     this.state = {
-      open: "closed"
+      open: "closed",
+      selectedOption: "fighter"
     }
     this.handleClick = this.handleClick.bind(this)
+    this.optionClickHandler = this.optionClickHandler.bind(this)
   }
 
   handleClick () {
@@ -36,14 +25,23 @@ class Options extends Component {
     }
   }
 
-  render () { 
+  optionClickHandler (option) {
+    this.setState({selectedOption: option})
+  }
+
+  render () {
+    const {handleClick, optionClickHandler, state} = this
+
     return (
-      <div id="lotus-options" onClick={this.handleClick}>
-        <div className={"options-title " + this.state.open}>Mode
-          <img className={"options-chevron " + this.state.open} src={chevron} />
+      <div id="lotus-options" onClick={handleClick}>
+        <div className={"options-title " + state.open}>Mode
+          <img className={"options-chevron " + state.open} src={chevron} />
         </div>
-        <div className={"options-subtitle " + this.state.open}>fighters</div>
-        <Menu open={this.state.open} />
+        <div className={"options-subtitle " + state.open}>{state.selectedOption}</div>
+        <Menu 
+          open={state.open}
+          menuOptions={["Events", "Fighting", "News"]} 
+          optionClickHandler={optionClickHandler}/>
       </div>
     )
   }
