@@ -12,9 +12,18 @@ class Toolbar extends Component {
             <div id="lotus-toolbar">
                 <Options />
                 <span className="lotus-options">
-                    <Filter icon={fighting_img} subtitle="martial art" />
-                    <Filter icon={worldwide} subtitle="region"/>
-                    <Filter icon={contract} subtitle="organization"/>
+                    <Filter 
+                        icon={fighting_img} 
+                        subtitle="martial art"
+                        filterOptions={["Judo", "Wrestling", "Boxing"]} />
+                    <Filter 
+                        icon={worldwide} 
+                        subtitle="region"
+                        filterOptions={["Europe", "Americas", "Africa"]} />
+                    <Filter 
+                        icon={contract} 
+                        subtitle="organization"
+                        filterOptions={["UFC", "One", "Bellator", "BAMMA"]}/>
                 </span>
             </div>
         )
